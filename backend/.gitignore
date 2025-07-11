@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Ignore everything in /dist except seed.js (if inside dist/)
+dist/*
+!dist/seed.js
+
+# Ignore seed.js elsewhere if needed
+!seed.js
+
+# OS files
+.DS_Store
+Thumbs.db
