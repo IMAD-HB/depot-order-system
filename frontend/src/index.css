@@ -1,1 +1,46 @@
 @import "tailwindcss";
+
+/* Base layout reset */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background gradient — optional if also in App.jsx */
+body {
+  background: linear-gradient(to top right, #1f1c2c, #928DAB);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+/* Box sizing globally */
+* {
+  box-sizing: border-box;
+}
+
+/* Optional: Smooth scroll and scrollbar styling */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* Prevent focus outlines unless necessary */
+a:focus,
+button:focus {
+  outline: none;
+}

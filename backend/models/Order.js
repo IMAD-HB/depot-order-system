@@ -14,9 +14,10 @@ const orderSchema = new mongoose.Schema(
     },
     items: [
       {
-        productName: {
-          type: String,
-          required: [true, "Le nom du produit est requis"],
+        productId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Product",
+          required: [true, "Le produit est requis"],
         },
         quantity: {
           type: Number,
@@ -28,6 +29,11 @@ const orderSchema = new mongoose.Schema(
     notes: {
       type: String,
       trim: true,
+    },
+    status: {
+      type: String,
+      enum: ["livré", "non livré"],
+      default: "non livré",
     },
   },
   { timestamps: true }
